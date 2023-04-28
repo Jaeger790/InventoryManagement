@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane  prefHeight="720.0" prefWidth="920.0" styleClass="addProductForm" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+             xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <TableView fx:id="associatedPartTable" layoutX="400.0" layoutY="360.0" prefHeight="240.0" prefWidth="460.0">
+        <columns>
+          <TableColumn fx:id="associatedId" prefWidth="45.0" text="Id" />
+          <TableColumn fx:id="associatedName" prefWidth="220.0" text="Part Name" />
+            <TableColumn fx:id="associatedInv" minWidth="0.0" prefWidth="65.0" text="Inventory" />
+            <TableColumn fx:id="associatedPrice" prefWidth="130.0" text="Price / Cost" />
+        </columns>
+      </TableView>
+      <TableView fx:id="partListTable" layoutX="400.0" layoutY="40.0" prefHeight="240.0" prefWidth="460.0">
+         <columns>
+            <TableColumn fx:id="partId" prefWidth="45.0" text="Id" />
+            <TableColumn fx:id="partName" prefWidth="220.0" text="Part Name" />
+            <TableColumn fx:id="partInv" prefWidth="65.0" text="Inventory" />
+            <TableColumn fx:id="partPrice" prefWidth="130.0" text="Price / Cost" />
+         </columns>
+      </TableView>
+      <Button fx:id="associatedPartButton" layoutX="405.0" layoutY="290.0" mnemonicParsing="false" text="Add Part">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="saveProductButton" defaultButton="true" layoutX="672.0" layoutY="674.0" mnemonicParsing="false" prefWidth="100.0" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="cancelAddProductB" cancelButton="true" layoutX="791.0" layoutY="674.0" mnemonicParsing="false" prefWidth="100.0" text="Cancel">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="removeAssociatedPartB" layoutX="405.0" layoutY="610.0" mnemonicParsing="false" text="Remove Associated Part">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="95.0" layoutY="435.0" text="Min" />
+      <Label layoutX="95.0" layoutY="395.0" text="Max" />
+      <Label layoutX="90.0" layoutY="355.0" text="Price" />
+      <Label layoutX="65.0" layoutY="315.0" text="Inventory" />
+      <Label layoutX="85.0" layoutY="275.0" text="Name" />
+      <Label layoutX="105.0" layoutY="235.0" text="Id" />
+      <TextField fx:id="productIdT" layoutX="125.0" layoutY="230.0" />
+      <TextField fx:id="productNameT" layoutX="125.0" layoutY="270.0" />
+      <TextField fx:id="productInventoryT" layoutX="125.0" layoutY="310.0" />
+      <TextField fx:id="productPriceT" layoutX="125.0" layoutY="350.0" />
+      <TextField fx:id="productMaxT" layoutX="125.0" layoutY="390.0" />
+      <TextField fx:id="productMinT" layoutX="125.0" layoutY="430.0" />
+
+      <TextField fx:id="searchBox"  layoutX="700.0" layoutY="10.0" promptText="Search by Id or Name" />
+
+      <Label fx:id="productHeader" layoutX="21.0" layoutY="24.0" styleClass="productScreenHeading" text="Add Product">
+         <font>
+            <Font name="Fira Code" size="24.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

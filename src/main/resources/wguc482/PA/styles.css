@@ -1,0 +1,75 @@
+@font-face {
+   font-family: "Fira Code Regular";
+   src: url("FiraCode-Regular.ttf");
+}
+
+.homeScreen{
+    -fx-background-color: rgba(120,134,107,.6);
+}
+.header{
+    -fx-font-family: "Fira Code Regular";
+    -fx-font-size: 24;
+}
+.button{
+    -fx-background-radius: 50px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+    -fx-font-weight: bold;
+}
+
+#exitButton{
+    -fx-border-radius: 50%;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 5, 0, 0, 0);
+    -fx-text-fill: white;
+    -fx-background-color: red;
+    -fx-font-size: 12pt;
+}
+#exitButton:hover{
+    -fx-background-color: darkred;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 1), 10, .5, 0, 0);
+}
+
+.text-field{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 5, 0, 0, 0);
+}
+
+#partsMainPane{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 15, 0, 0, 0);
+    -fx-background-color: rgba(120,134,107,1);
+}
+#ProductsMainPane{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 15, 0, 0, 0);
+    -fx-background-color: rgba(134,132,107,1);
+}
+
+
+
+
+//Add Part Form Screen
+
+.addPartForm{
+    -fx-background-color: rgba(120,134,107,1);
+}
+.formLabel{
+    -fx-font-weight: bold;
+    -fx-font-size: 10pt;
+}
+.radio-button{
+    -fx-font-weight: bold;
+    -fx-font-size: 10pt;
+}
+.PartScreenHeading{
+    -fx-font-size: 18pt;
+}
+
+.textFieldError{
+    -fx-text-box-border: red;
+    -fx-focus-color: red;
+}
+
+//Add Product Screen
+
+.addProductForm{
+    -fx-background-color: rgba(134,132,107,1);
+    -fx-font-weight: bold;
+}
+

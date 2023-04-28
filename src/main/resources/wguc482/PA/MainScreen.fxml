@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" styleClass="homeScreen"
+            stylesheets="@styles.css"
+            xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+
+    <Label fx:id="headerLabel" layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="401.0" styleClass="header" text="Inventory Management System">
+
+    </Label>
+
+
+      <AnchorPane id="ProductsMainPane" layoutX="405.0" layoutY="55.0" prefHeight="290.0" prefWidth="390.0" AnchorPane.rightAnchor="5.0">
+
+          <Label id="ProductsHeader" layoutX="10.0" layoutY="24.0" styleClass="header" text="Products">
+
+          </Label>
+
+            <Button fx:id="modifyProductButton"  layoutX="241.0" layoutY="253.0" mnemonicParsing="false" prefWidth="65.0" text="Modify" AnchorPane.rightAnchor="85.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+
+            <Button fx:id="addProductButton" layoutX="166.0" layoutY="253.0" mnemonicParsing="false"  prefWidth="65.0"
+                    text="Add"
+                    AnchorPane.rightAnchor="160.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+
+            <TableView id="ProductsTableMain" fx:id="productsTable" maxWidth="1200.0" prefHeight="200.0" prefWidth="370.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+              <columns>
+                <TableColumn fx:id="productId" prefWidth="30.0" text="ID" />
+                <TableColumn fx:id="productName" prefWidth="181.0" text="Product Name" />
+                <TableColumn fx:id="productInventory" prefWidth="93.0" text="Inventory Level" />
+                <TableColumn fx:id="productPrice" prefWidth="67.0" text="Price/Unit" />
+              </columns>
+            </TableView>
+
+            <Button  fx:id="productDeleteB" layoutX="315.0" layoutY="253.0" mnemonicParsing="false"  prefWidth="65.0" text="Delete"
+                     AnchorPane.rightAnchor="10.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+
+            <TextField fx:id="productSearchField" layoutX="230.0" layoutY="22.0"  prefHeight="25.0"  prefWidth="160.0"
+                       promptText="Search by Id or Name"
+                       AnchorPane.rightAnchor="10.0">
+         </TextField>
+
+
+      </AnchorPane>
+
+
+      <AnchorPane id="partsMainPane" styleClass="homeScreen" layoutX="5.0" layoutY="55.0" maxHeight="720.0" maxWidth="1200.0" minWidth="200.0" prefHeight="290.0" prefWidth="390.0"
+                  AnchorPane.leftAnchor="5.0">
+
+            <TableView id="tableMainParts" fx:id="partsTable" maxWidth="1200.0" prefHeight="200.0" prefWidth="370.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+              <columns>
+                <TableColumn fx:id="partId" prefWidth="30.0" text="ID" />
+                <TableColumn fx:id="partName" prefWidth="177.0" text="Part Name" />
+                <TableColumn fx:id="partInventory" prefWidth="97.0" text="Inventory  Level" />
+                <TableColumn fx:id="partPrice" prefWidth="65.0" text="Price/Unit" />
+              </columns>
+            </TableView>
+
+            <Button fx:id="modifyPartB" layoutX="241.0" layoutY="253.0" mnemonicParsing="false" prefWidth="65.0" text="Modify"
+                    AnchorPane.rightAnchor="85.0">
+             <cursor>
+                 <Cursor fx:constant="HAND" />
+             </cursor>
+             </Button>
+
+             <Button fx:id="deletePartB" layoutX="315.0" layoutY="253.0" mnemonicParsing="false"  prefWidth="65.0" text="Delete" AnchorPane.rightAnchor="10.0">
+                 <cursor>
+                 <Cursor fx:constant="HAND" />
+              </cursor>
+             </Button>
+
+             <Button fx:id="addPartB" layoutX="166.0" layoutY="253.0" mnemonicParsing="false"  prefWidth="65.0" text="Add" AnchorPane.rightAnchor="160.0">
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </Button>
+
+          <TextField id="ProductsT" fx:id="partSearchField" layoutX="231.0" layoutY="22.0" prefHeight="25.0" prefWidth="160.0" promptText="Search by Id or Name"
+                     AnchorPane.rightAnchor="10.0"/>
+
+          <Label layoutX="10.0" layoutY="24.0" prefHeight="32.0" prefWidth="115.0" styleClass="header" text="Parts"/>
+
+      </AnchorPane>
+
+
+    <Button fx:id="exitButton" id="exitButton" styleClass="button" layoutX="681.0" layoutY="561.0" mnemonicParsing="false"  prefWidth="105" text="Exit"
+            AnchorPane.bottomAnchor="14.0"
+            AnchorPane.rightAnchor="14.0">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+</AnchorPane>
