@@ -1,0 +1,25 @@
+# Maven output
+/target/
+# IDE / editors
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+# OS / temp
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+# Private environment files
+.env
+.env.*
+!.env.example
+
+# Local databases and SQLite write-ahead logs
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3

@@ -87,7 +87,7 @@ See [architecture and upgrade suggestions](docs/ARCHITECTURE.md) and [refactor c
 
 ## Technical design
 
-An abstract `Part` defines shared fields and validation. `InHouse` and `Outsourced` extend `Part` with their own data. Products track unique part IDs; the `InventoryService` resolves and validates relationships independently of the JavaFX user interface. `InventoryRepository` can later be implemented using SQLite without redesigning the UI.
+An abstract `Part` defines shared fields and validation. `InHouse` and `Outsourced` extend `Part` with their own data. Products track unique part IDs; the `InventoryService` resolves and validates relationships independently of the JavaFX user interface. `InventoryRepository` has SQLite storage for the app and an in-memory implementation for service tests.
 
 ## Testing
 
